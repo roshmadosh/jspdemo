@@ -1,0 +1,11 @@
+= JSP, Servlets, and a Bunch of Old Stuff
+
+Writing a JSP app to practice my Java.
+
+CAUTION: Old tools are used in the making of this repo, including this https://asciidoctor.org/docs/what-is-asciidoc/[AsciiDoc].
+
+A Tomcat server was installed and configured locally, spent some time setting up users, groups, and permissions in Linux.
+
+I'm using Eclipse instead of Intellij because the Community Edition for IJ doesn't do autocomplete for JSP documents.
+
+
