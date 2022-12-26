@@ -8,9 +8,16 @@
 	--padding-input: 0.5rem;
 	--padding-button: 0.5rem 2rem;
 	--font-size-reg: 1.6rem;
-	--form-background: rgba(0,0,0,0.6);
+	--background-form: rgba(0,0,0,0.6);
 	--color-header: rgba(144, 12, 63, 0.6);
 	--color-footer: var(--color-header);
+	--height-form: 50%;
+	--width-form: 90%;
+	--height-session: var(--height-form);
+	--width-session: var(--width-form); 
+	--padding-session: var(--padding-form);
+	--background-session: var(--background-form);
+	--margin-bottom-field: var(--font-size-reg);
 }
 
 * {
@@ -49,22 +56,34 @@ button:hover {
 	color: var(--color-dark);
 }
 
-form {
-	color: var(--color-white);
-	height: 50%;
-	width: 90%;
-	padding: var(--padding-form);
-	display: flex;
-	flex-direction: column;
-	background: var(--form-background);
-	border-radius: .5rem;
-}
-
 .view-width{
 	margin: auto;
 	width: 90%;
 	min-width: 896px;
 	max-width: 1400px;
+}
+
+form {
+	color: var(--color-white);
+	height: var(--height-form);
+	width: var(--width-form);
+	padding: var(--padding-form);
+	display: flex;
+	flex-direction: column;
+	background: var(--background-form);
+	border-radius: .5rem;
+}
+
+.session {
+	height: var(--height-session);
+	width: var(--width-session);
+	padding: var(--padding-session);
+	color: var(--color-white);
+	background: var(--background-session);
+	border-radius: .5rem;
+}
+.session > *:first-child {
+	margin-bottom: var(--margin-bottom-field);
 }
 
 .page{
@@ -148,7 +167,7 @@ footer > .container {
 .form-input > input {
 	color: var(--color-white);
 	display: block;
-	margin-bottom: var(--font-size-reg);
+	margin-bottom: var(--margin-bottom-field);
 }
 
 .form-buttons {

@@ -1,8 +1,8 @@
-<%@ page import="link.hiroshisprojects.jspdemo.FunUtils.Country"%>
+<%@ page import="link.hiroshisprojects.jspdemo.FunUtils.Country, java.util.*"%>
 
 <div class="page student">
 	<div class="page-container">
-		<form action="pages/student-form/student-response.jsp">
+		<form action="index.jsp">
 		
 			<div class="form-inputs">
 				<div class="form-input">
@@ -28,5 +28,31 @@
 			
 		</form>
 	</div>
-
+	<div class="page-container">
+		<div class="session">
+			<h2>Registered Students</h2> 		
+			<%
+				// get student items from session
+				List<String> students = (List<String>) session.getAttribute("student-info");
+				// if student doesn't exist, create one
+				if (students == null) {
+					students = new ArrayList<>();
+					session.setAttribute("student-info", students);
+				}
+				// add form data if needed
+				String firstname = request.getParameter("firstname");
+				String lastname = request.getParameter("lastname");
+				
+				if (firstname != null & lastname != null) {
+					String student = "Name: " + firstname + " " + lastname;
+					students.add(student);
+				}
+			%>
+			<%
+				for (String student: students) {
+					out.println("<p>" + student + "</p>");
+				}
+			%>
+		</div>
+	</div>
 </div>
