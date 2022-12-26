@@ -1,4 +1,4 @@
-<%@ page import="link.hiroshisprojects.jspdemo.FunUtils" %>
+<%@ page import="link.hiroshisprojects.jspdemo.FunUtils"%>
 
 <html>
 	<head>
@@ -11,7 +11,7 @@
 		</header>
 		
 		<main class="view-width">
-			<jsp:include page="pages/student-form/student-form.html" />
+			<jsp:include page="pages/student-form/student-form.jsp" />
 		</main>
 		<footer>
 			<jsp:include page="components/footer.html" />
